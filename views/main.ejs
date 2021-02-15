@@ -5,24 +5,25 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../resources/css/home.css">
 
     <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
     <title>Main Page</title>
 </head>
 <body>
 
-    <div class=".container-fluid">
+    <div class="container">
         <div class="row align-items-center">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <a class="navbar-brand" href="#">Bookface</a>
                 </nav>
             </div>
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-dark"><div id="posts" style="text-align: center">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div id="posts" style="text-align: center">
 
 
-                        <a href="/" style="text-align: center"><button class="btn btn-outline-success" id="post-create">Create Post</button></a>
+                        <a href="/"><button class="btn btn-outline-success" id="post-create">Create Post</button></a>
 
                         <div class="dimmer">
                             <span class="exit">&times;</span>
@@ -31,16 +32,21 @@
                 </nav>
             </div>
             <div class="col">
-                <div class="p-3 border bg-light">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <form class="form-inline my-2 my-lg-0">
-                        <a href="/"><button class="btn btn-outline-success">Signup</button></a>
-                        <a href="/"><button class="btn btn-outline-success">Login</button></a>
+                        <div class="btn-toolbar">
+                            <div class="btn-group mr-2">
+                                <a href="/"><button class="btn btn-outline-success btn-secondary">Signup</button></a>
+                                <a href="/"><button class="btn btn-outline-success btn-secondary">Login</button></a>
+                            </div>
+                        </div>
+
                     </form>
 
                     <div id="OnlineList">
 
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
     </div>
