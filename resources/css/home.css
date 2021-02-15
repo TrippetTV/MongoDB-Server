@@ -1,4 +1,8 @@
-
+nav{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
 
 a{
     justify-self: center;
