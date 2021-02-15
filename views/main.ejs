@@ -14,17 +14,15 @@
     <div class=".container-fluid">
         <div class="row align-items-center">
             <div class="col">
-                <div class="p-3 border bg-light">
-                    <div id="Navigation">
-
-                    </div>
-                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                    <a class="navbar-brand" href="#">Bookface</a>
+                </nav>
             </div>
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light"><div id="posts" style="text-align: center">
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark"><div id="posts" style="text-align: center">
 
 
-                        <a href="/" style="text-align: center"><button id="post-create">Create Post</button></a>
+                        <a href="/" style="text-align: center"><button class="btn btn-outline-success" id="post-create">Create Post</button></a>
 
                         <div class="dimmer">
                             <span class="exit">&times;</span>
@@ -34,10 +32,10 @@
             </div>
             <div class="col">
                 <div class="p-3 border bg-light">
-                    <div id="Signup">
-                        <a href="/"><button>Signup</button></a>
-                        <a href="/"><button>Login</button></a>
-                    </div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a href="/"><button class="btn btn-outline-success">Signup</button></a>
+                        <a href="/"><button class="btn btn-outline-success">Login</button></a>
+                    </form>
 
                     <div id="OnlineList">
 
