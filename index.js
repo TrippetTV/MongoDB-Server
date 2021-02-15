@@ -13,7 +13,7 @@ app.use(exp.static("resources"));
 app.use(mo("_method"));
 
 moon.connect("mongodb://localhost:27017/Users", { useNewUrlParser: true, useUnifiedTopology: true });
-moon.connect("mongodb://localhost:27017/Posts", { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 
 const UserSchema = new moon.Schema({
@@ -131,7 +131,7 @@ app.delete('/index/:id', async (req, res)=>{
     })
 })
 
-$(app.get("post", (req, res) => {
+/*$(app.get("post", (req, res) => {
     const button = document.querySelector("#post-create")
     const dimmer = $('.dimmer');
     button.on("click", (e) => {
@@ -140,7 +140,7 @@ $(app.get("post", (req, res) => {
     exit.on("click", (e) => {
         dimmer.hide()
     })
-}));
+}));*/
 
 
 
