@@ -13,6 +13,8 @@ app.use(exp.static("resources"));
 app.use(mo("_method"));
 
 moon.connect("mongodb://localhost:27017/Users", { useNewUrlParser: true, useUnifiedTopology: true });
+moon.connect("mongodb://localhost:27017/Posts", { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const UserSchema = new moon.Schema({
     user: String,
