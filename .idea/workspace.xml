@@ -20,6 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +82,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="G:/My Drive/Skolarbete/Webbskapande/Webbutveckling/Project" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -109,6 +113,7 @@
       <workItem from="1611733341436" duration="17283000" />
       <workItem from="1612339223682" duration="5437000" />
       <workItem from="1612943000013" duration="3949000" />
+      <workItem from="1613480178783" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -131,21 +136,7 @@
       <option name="project" value="LOCAL" />
       <updated>1613402232600</updated>
     </task>
-    <task id="LOCAL-00004" summary="Updated style">
-      <created>1613402799617</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1613402799617</updated>
-    </task>
-    <task id="LOCAL-00005" summary="container">
-      <created>1613402903606</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613402903606</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,8 +158,16 @@
     <MESSAGE value="changed middle column to navbar" />
     <MESSAGE value="Centered create post" />
     <MESSAGE value="Updated Main" />
-    <MESSAGE value="Updated style" />
-    <MESSAGE value="container" />
-    <option name="LAST_COMMIT_MESSAGE" value="container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Main" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="776" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613465638878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1613465638878" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1613480554774">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613480554774" />
   </component>
 </project>

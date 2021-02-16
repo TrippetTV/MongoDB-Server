@@ -12,9 +12,7 @@ app.use(exp.urlencoded({ extended: true }));
 app.use(exp.static("resources"));
 app.use(mo("_method"));
 
-moon.connect("mongodb://localhost:27017/Users", { useNewUrlParser: true, useUnifiedTopology: true });
-
-
+moon.connect("mongodb://localhost:27017/Project", { useNewUrlParser: true, useUnifiedTopology: true });
 
 const UserSchema = new moon.Schema({
     user: String,
@@ -22,7 +20,6 @@ const UserSchema = new moon.Schema({
     fName: String,
     eName: String,
     age: Number,
-    inS: Boolean,
 });
 
 let User = moon.model("User", UserSchema);
@@ -48,26 +45,25 @@ app.get("/create", (req, res) => {
     res.render("/create");
 })
 
-app.get("/index", (req, res) => {
+app.get("/main", (req, res) => {
     User.find({}, (err, data) => {
         if (err){
             res.send("404 - site not found");
         }else{
             let bob = data;
             console.log(data);
-            res.render("index", {data: bob});
+            res.render("main", {data: bob});
         }
     })
 })
 
-app.post("/index", (req, res) => {
+app.post("/main", (req, res) => {
     console.log(req.body);
     let usr = req.body.user;
     let pass = req.body.pass;
     let fName = req.body.fName;
     let eName = req.body.eName;
     let age = req.body.age;
-    let inS = req.body.inS;
 
     User.create({
         usr: usr,
@@ -75,13 +71,16 @@ app.post("/index", (req, res) => {
         fName: fName,
         eName: eName,
         age: age,
-        inS: inS,
     });
     res.redirect('/')
 });
 
+app.post("/create", (req, res) => {
+    res.render("create")
+})
+
 //SHOW ROUTE
-app.get("/index/:id", (req,res)=>{
+app.get("/main/:id", (req,res)=>{
     User.findById(req.params.id, (err, data)=>{
         if(err){
             res.send("Profile not found")
@@ -93,7 +92,7 @@ app.get("/index/:id", (req,res)=>{
 })
 
 //UPDATE ROUTE
-app.get('/index/:id/edit', (req, res)=>{
+app.get('/main/:id/edit', (req, res)=>{
     User.findById(req.params.id, (err, data)=>{
         if(err){
             console.log(err);
@@ -103,7 +102,7 @@ app.get('/index/:id/edit', (req, res)=>{
         }
     })
 })
-app.put('/index/:id', async (req, res)=>{
+app.put('/main/:id', async (req, res)=>{
     await User.findByIdAndUpdate(req.params.id, {
         usr:req.body.usr,
         pass:req.body.pass,
@@ -116,10 +115,10 @@ app.put('/index/:id', async (req, res)=>{
 })
 
 //DELETE ROUTE
-app.get('/index/:id/delete', (req, res)=>{
+app.get('/main/:id/delete', (req, res)=>{
     res.render('delete', {id:req.params.id})
 })
-app.delete('/index/:id', async (req, res)=>{
+app.delete('/main/:id', async (req, res)=>{
     await User.findByIdAndDelete(req.params.id, (err)=>{
         if(err){
             console.log(err)
