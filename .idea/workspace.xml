@@ -19,12 +19,88 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Updated buttons to render create.ejs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/bulma.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma-rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma-rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma-rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/css/bulma.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/base/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/base/animations.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/base/generic.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/base/helpers.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/base/minireset.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/breadcrumb.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/card.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/dropdown.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/level.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/media.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/menu.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/message.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/modal.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/navbar.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/pagination.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/panel.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/components/tabs.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/box.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/button.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/container.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/content.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/form.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/icon.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/image.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/notification.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/other.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/progress.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/table.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/tag.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/elements/title.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/checkbox-radio.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/file.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/input-textarea.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/select.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/shared.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/form/tools.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/grid/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/grid/columns.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/grid/tiles.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/color.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/flexbox.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/float.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/other.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/overflow.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/position.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/spacing.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/typography.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/helpers/visibility.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/layout/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/layout/footer.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/layout/hero.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/layout/section.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/_all.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/animations.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/controls.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/derived-variables.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/extends.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/functions.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/initial-variables.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bulma/sass/utilities/mixins.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jquery/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +189,8 @@
       <workItem from="1611733341436" duration="17283000" />
       <workItem from="1612339223682" duration="5437000" />
       <workItem from="1612943000013" duration="3949000" />
-      <workItem from="1613480178783" duration="624000" />
+      <workItem from="1613480178783" duration="3841000" />
+      <workItem from="1613548404054" duration="3854000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -136,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613402232600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated buttons to render create.ejs">
+      <created>1613480948621</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613480948621</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,9 +242,14 @@
     <MESSAGE value="changed middle column to navbar" />
     <MESSAGE value="Centered create post" />
     <MESSAGE value="Updated Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Main" />
+    <MESSAGE value="Updated buttons to render create.ejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated buttons to render create.ejs" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="237" key="Vcs.Push.Dialog.v2" timestamp="1613555853589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="237" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1613555853589" />
     <state x="776" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613465638878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

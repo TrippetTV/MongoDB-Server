@@ -12,38 +12,59 @@
 <body>
     <div class=".container-fluid">
         <div class="row align-items-center">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="col">
                     <a class="navbar-brand" href="/">Bookface</a>
-                </nav>
-            </div>
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light"><div id="posts" style="text-align: center">
-
-
-                        <a href="/"><button class="btn btn-outline-success" id="post-create">Create Post</button></a>
+                </div>
+                <div class="col">
+                    <div style="text-align: center">
+                        <button class="btn btn-outline-success" id="post-create">Create Post</button>
 
                         <div class="dimmer">
                             <span class="exit">&times;</span>
                         </div>
                     </div>
-                </nav>
-            </div>
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                </div>
+                <div class="col">
                     <div class="btn-toolbar">
                             <div class="btn-group mr-2">
-                                <a href="/create"><button class="btn btn-outline-success">Registrera</button></a>
+                                <a href="/create"><button class="btn btn-outline-success">Signup</button></a>
                                 <a href="/create"><button class="btn btn-outline-success">Login</button></a>
                             </div>
                         </div>
-
-                    <div id="OnlineList">
-
-                    </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div id="posts" class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
 </body>
 </html>
+<script>
+    let check = false;
+    const button = document.querySelector("#post-create")
+    const posts = document.querySelector("#posts")
+    button.addEventListener("click", (e) => {
+        //const dimmer = $('.dimmer');
+        if (!check) {
+            let txtarea = document.createElement("textarea")
+            txtarea.style.width = "100%"
+            txtarea.style.height = "250px"
+            posts.append(txtarea)
+            check = true
+        }
+    })
+        //exit.on("click", (e) => {
+        //check = false
+        //})
+</script>

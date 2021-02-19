@@ -39,11 +39,11 @@ app.get("/main", (req, res) => {
 
 app.get("/", (req, res) => {
     res.redirect("/main")
-})
+});
 
 app.get("/create", (req, res) => {
-    res.render("/create");
-})
+    res.render("create")
+});
 
 app.get("/main", (req, res) => {
     User.find({}, (err, data) => {
@@ -75,8 +75,27 @@ app.post("/main", (req, res) => {
     res.redirect('/')
 });
 
-app.post("/create", (req, res) => {
-    res.render("create")
+app.post("/main", (req, res) => {
+
+
+    if (!req.body.user) {
+        let user = "Anonymous User"
+    } else {
+        let user = req.body.user
+    }
+
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+
+    msg.create({
+        from: user,
+        to: "Page",
+        date: dd + '/' + mm + '/' + yyyy,
+        message: String
+    })
+
 })
 
 //SHOW ROUTE
@@ -130,16 +149,21 @@ app.delete('/main/:id', async (req, res)=>{
     })
 })
 
-/*$(app.get("post", (req, res) => {
+app.get("post", (req, res) => {
     const button = document.querySelector("#post-create")
     const dimmer = $('.dimmer');
     button.on("click", (e) => {
         dimmer.show()
+        let txtarea = document.createElement("textarea")
+        txtarea.width = "300px"
+        txtarea.height = "200px"
+        document.appendChild(txtarea)
     });
     exit.on("click", (e) => {
         dimmer.hide()
     })
-}));*/
+});
+
 
 
 
