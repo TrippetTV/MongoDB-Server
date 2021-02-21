@@ -77,25 +77,25 @@ app.post("/main", (req, res) => {
 
 app.post("/main", (req, res) => {
 
+    let user
 
     if (!req.body.user) {
-        let user = "Anonymous User"
+        user = "Anonymous User"
     } else {
-        let user = req.body.user
+        user = req.body.user
     }
 
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
-    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //Januari är 0!
     let yyyy = today.getFullYear();
 
     msg.create({
         from: user,
-        to: "Page",
+        to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
         message: String
     })
-
 })
 
 //SHOW ROUTE
@@ -163,8 +163,6 @@ app.get("post", (req, res) => {
         dimmer.hide()
     })
 });
-
-
 
 
 app.listen(3000, (err) => {
