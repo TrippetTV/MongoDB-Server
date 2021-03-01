@@ -46,18 +46,19 @@ app.get("/create", (req, res) => {
 });
 
 app.get("/main", (req, res) => {
-    User.find({}, (err, data) => {
+    msg.find({}, (err, data) => {
         if (err){
             res.send("404 - site not found");
         }else{
-            let bob = data;
             console.log(data);
-            res.render("main", {data: bob});
+            res.render("main", {data: data});
         }
     })
 })
 
 app.post("/main", (req, res) => {
+
+    //TODO Check for existing user
     console.log(req.body);
     let usr = req.body.user;
     let pass = req.body.pass;
@@ -89,6 +90,7 @@ app.post("/main", (req, res) => {
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //Januari är 0!
     let yyyy = today.getFullYear();
+    console.log(dd + '/' + mm + '/' + yyyy)
 
     msg.create({
         from: user,
@@ -121,6 +123,7 @@ app.get('/main/:id/edit', (req, res)=>{
         }
     })
 })
+
 app.put('/main/:id', async (req, res)=>{
     await User.findByIdAndUpdate(req.params.id, {
         usr:req.body.usr,
@@ -137,6 +140,7 @@ app.put('/main/:id', async (req, res)=>{
 app.get('/main/:id/delete', (req, res)=>{
     res.render('delete', {id:req.params.id})
 })
+
 app.delete('/main/:id', async (req, res)=>{
     await User.findByIdAndDelete(req.params.id, (err)=>{
         if(err){

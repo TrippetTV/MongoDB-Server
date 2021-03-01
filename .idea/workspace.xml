@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Updated buttons to render create.ejs">
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Added post creation, haven't been tested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,12 +55,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1613400692" />
+                    <option name="branchName" value="Final_Rush" />
+                    <option name="lastUsedInstant" value="1614605489" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="development" />
-                    <option name="lastUsedInstant" value="1613400691" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1613400692" />
                   </RecentBranch>
                 </list>
               </option>
@@ -80,7 +81,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/My Drive/Skolarbete/Webbskapande/Webbutveckling/Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -111,6 +112,10 @@
       <workItem from="1612339223682" duration="5437000" />
       <workItem from="1612943000013" duration="3949000" />
       <workItem from="1613480178783" duration="624000" />
+      <workItem from="1613910256278" duration="789000" />
+      <workItem from="1614005440353" duration="179000" />
+      <workItem from="1614331263598" duration="17000" />
+      <workItem from="1614604943420" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613402232600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added post creation, haven't been tested">
+      <created>1613910445694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613910445694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +167,7 @@
     <MESSAGE value="changed middle column to navbar" />
     <MESSAGE value="Centered create post" />
     <MESSAGE value="Updated Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Main" />
+    <MESSAGE value="Added post creation, haven't been tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added post creation, haven't been tested" />
   </component>
 </project>
