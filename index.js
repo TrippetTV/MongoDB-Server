@@ -31,7 +31,7 @@ const msgSchema = new moon.Schema({
     message: String
 })
 
-let msg = moon.model("msg", msgSchema)
+let Msg = moon.model("Msg", msgSchema)
 
 app.get("/main", (req, res) => {
     res.render("main")
@@ -46,7 +46,7 @@ app.get("/create", (req, res) => {
 });
 
 app.get("/main", (req, res) => {
-    msg.find({}, (err, data) => {
+    Msg.find({}, (err, data) => {
         if (err){
             res.send("404 - site not found");
         }else{
@@ -56,7 +56,7 @@ app.get("/main", (req, res) => {
     })
 })
 
-app.post("/main", (req, res) => {
+app.post("/", (req, res) => {
 
     //TODO Check for existing user
     console.log(req.body);
@@ -92,12 +92,14 @@ app.post("/main", (req, res) => {
     let yyyy = today.getFullYear();
     console.log(dd + '/' + mm + '/' + yyyy)
 
-    msg.create({
+    Msg.create({
         from: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
         message: String
     })
+
+    res.redirect('/')
 })
 
 //SHOW ROUTE
