@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Moved away post creation from script tag to main html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,7 @@
       <workItem from="1614005440353" duration="179000" />
       <workItem from="1614331263598" duration="17000" />
       <workItem from="1614604943420" duration="726000" />
-      <workItem from="1614605688698" duration="2627000" />
+      <workItem from="1614605688698" duration="5072000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -171,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614607418972</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Moved away post creation from script tag to main html">
+      <created>1614608386242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614608386242</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +203,7 @@
     <MESSAGE value="Made seperate branch for last rush" />
     <MESSAGE value="Tried fixing post creation" />
     <MESSAGE value="Tried fixing post creation again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried fixing post creation again" />
+    <MESSAGE value="Moved away post creation from script tag to main html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved away post creation from script tag to main html" />
   </component>
 </project>
