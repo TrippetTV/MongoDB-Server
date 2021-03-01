@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Added test data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +80,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -237,5 +239,19 @@
     <MESSAGE value="Starting to not allow duplicate accounts" />
     <MESSAGE value="fixed check for duplicate accounts" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed check for duplicate accounts" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="778" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614615851652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="778" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614615851652" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1614616749314">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614616749314" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614616832462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614616832462" />
   </component>
 </project>

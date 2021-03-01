@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/main", (req, res) => {
-    Msg.find({}, (err, data) => {
+    Msg.find({message: {$gt:0}}, (err, data) => {
         if (err){
             res.send("404 - site not found");
         }else{
@@ -57,8 +57,8 @@ app.get("/create", (req, res) => {
 app.post("/", (req, res) => {
 
     //TODO Check for existing user
-    let error = User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}, (err))
-    if(User.countDocuments({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}, limit = 1) !== 0) {
+    let error = User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age})
+    if(User.countDocuments({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}) !== 0) {
         let usr = req.body.user;
         let pass = req.body.pass;
         let fName = req.body.fName;
