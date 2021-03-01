@@ -57,22 +57,24 @@ app.get("/create", (req, res) => {
 app.post("/", (req, res) => {
 
     //TODO Check for existing user
-    console.log(User.findOne({}, { usr: 1, pass: 1, fName: 1, eName: 1, age: 1}))
-    if(!User.findOne({}, { usr: 1, pass: 1, fName: 1, eName: 1, age: 1}) == null)
-    console.log(req.body);
-    let usr = req.body.user;
-    let pass = req.body.pass;
-    let fName = req.body.fName;
-    let eName = req.body.eName;
-    let age = req.body.age;
+    console.log(User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}))
+    if(!User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age})) {
+        let usr = req.body.user;
+        let pass = req.body.pass;
+        let fName = req.body.fName;
+        let eName = req.body.eName;
+        let age = req.body.age;
 
-    User.create({
-        usr: usr,
-        pass: pass,
-        fName: fName,
-        eName: eName,
-        age: age,
-    });
+        User.create({
+            usr: usr,
+            pass: pass,
+            fName: fName,
+            eName: eName,
+            age: age,
+        });
+    }
+    console.log(req.body);
+
     res.redirect('/')
 });
 
@@ -181,154 +183,3 @@ app.listen(3000, (err) => {
         console.log("Connected");
     }
 });
-
-
-/*Query {
-  _mongooseOptions: {},
-  _transforms: [],
-  _hooks: Kareem { _pres: Map {}, _posts: Map {} },
-  _executionCount: 0,
-  mongooseCollection: NativeCollection {
-    collection: Collection { s: [Object] },
-    Promise: [Function: Promise],
-    _closed: false,
-    opts: {
-      schemaUserProvidedOptions: {},
-      capped: false,
-      autoCreate: undefined,
-      Promise: [Function: Promise],
-      '$wasForceClosed': undefined
-    },
-    name: 'users',
-    collectionName: 'users',
-    conn: NativeConnection {
-      base: [Mongoose],
-      collections: [Object],
-      models: [Object],
-      config: [Object],
-      replica: false,
-      options: null,
-      otherDbs: [],
-      relatedDbs: {},
-      states: [Object: null prototype],
-      _readyState: 1,
-      _closeCalled: false,
-      _hasOpened: true,
-      plugins: [],
-      id: 0,
-      _listening: false,
-      _connectionString: 'mongodb://localhost:27017/Project',
-      _connectionOptions: [Object],
-      name: 'Project',
-      host: 'localhost',
-      port: 27017,
-      user: undefined,
-      pass: undefined,
-      client: [MongoClient],
-      '$initialConnection': [Promise],
-      db: [Db]
-    },
-    queue: [],
-    buffer: false,
-    emitter: EventEmitter {
-      _events: [Object: null prototype] {},
-      _eventsCount: 0,
-      _maxListeners: undefined,
-      [Symbol(kCapture)]: false
-    }
-  },
-  model: Model { User },
-  schema: Schema {
-    obj: {
-      user: [Function: String],
-      pass: [Function: String],
-      fName: [Function: String],
-      eName: [Function: String],
-      age: [Function: Number]
-    },
-    paths: {
-      user: [SchemaString],
-      pass: [SchemaString],
-      fName: [SchemaString],
-      eName: [SchemaString],
-      age: [SchemaNumber],
-      _id: [ObjectId],
-      __v: [SchemaNumber]
-    },
-    aliases: {},
-    subpaths: {},
-    virtuals: { id: [VirtualType] },
-    singleNestedPaths: {},
-    nested: {},
-    inherits: {},
-    callQueue: [],
-    _indexes: [],
-    methods: {},
-    methodOptions: {},
-    statics: {},
-    tree: {
-      user: [Function: String],
-      pass: [Function: String],
-      fName: [Function: String],
-      eName: [Function: String],
-      age: [Function: Number],
-      _id: [Object],
-      __v: [Function: Number],
-      id: [VirtualType]
-    },
-    query: {},
-    childSchemas: [],
-    plugins: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
-    '$id': 1,
-    s: { hooks: [Kareem] },
-    _userProvidedOptions: {},
-    options: {
-      typePojoToMixed: true,
-      typeKey: 'type',
-      id: true,
-      noVirtualId: false,
-      _id: true,
-      noId: false,
-      validateBeforeSave: true,
-      read: null,
-      shardKey: null,
-      autoIndex: null,
-      minimize: true,
-      discriminatorKey: '__t',
-      optimisticConcurrency: false,
-      versionKey: '__v',
-      capped: false,
-      bufferCommands: true,
-      strictQuery: false,
-      strict: true,
-      pluralization: true
-    },
-    '$globalPluginsApplied': true
-  },
-  op: 'findOne',
-  options: {},
-  _conditions: {},
-  _fields: { usr: 1, pass: 1, fName: 1, eName: 1, age: 1 },
-  _update: undefined,
-  _path: undefined,
-  _distinct: undefined,
-  _collection: NodeCollection {
-    collection: NativeCollection {
-      collection: [Collection],
-      Promise: [Function: Promise],
-      _closed: false,
-      opts: [Object],
-      name: 'users',
-      collectionName: 'users',
-      conn: [NativeConnection],
-      queue: [],
-      buffer: false,
-      emitter: [EventEmitter]
-    },
-    collectionName: 'users'
-  },
-  _traceFunction: undefined,
-  '$useProjection': true,
-  _userProvidedFields: { usr: 1, pass: 1, fName: 1, eName: 1, age: 1 }
-}
-*/
