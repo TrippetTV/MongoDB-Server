@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Moved away post creation from script tag to main html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +116,7 @@
       <workItem from="1614005440353" duration="179000" />
       <workItem from="1614331263598" duration="17000" />
       <workItem from="1614604943420" duration="726000" />
-      <workItem from="1614605688698" duration="5072000" />
+      <workItem from="1614605688698" duration="5479000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -177,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614608386242</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added show for posts in ejs + html">
+      <created>1614612176231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614612176231</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +208,7 @@
     <MESSAGE value="Tried fixing post creation" />
     <MESSAGE value="Tried fixing post creation again" />
     <MESSAGE value="Moved away post creation from script tag to main html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved away post creation from script tag to main html" />
+    <MESSAGE value="Added show for posts in ejs + html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added show for posts in ejs + html" />
   </component>
 </project>

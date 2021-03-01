@@ -38,14 +38,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/main", (req, res) => {
-    res.render("main")
-})
-
-app.get("/create", (req, res) => {
-    res.render("create")
-});
-
-app.get("/main", (req, res) => {
     Msg.find({}, (err, data) => {
         if (err){
             res.send("404 - site not found");
@@ -55,6 +47,12 @@ app.get("/main", (req, res) => {
         }
     })
 })
+
+app.get("/create", (req, res) => {
+    res.render("create")
+});
+
+
 
 app.post("/", (req, res) => {
 
