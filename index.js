@@ -25,7 +25,7 @@ const UserSchema = new moon.Schema({
 let User = moon.model("User", UserSchema);
 
 const msgSchema = new moon.Schema({
-    from: String,
+    User: String,
     to: String,
     date: Date,
     message: String
@@ -33,13 +33,13 @@ const msgSchema = new moon.Schema({
 
 let Msg = moon.model("Msg", msgSchema)
 
-app.get("/main", (req, res) => {
-    res.render("main")
-})
-
 app.get("/", (req, res) => {
     res.redirect("/main")
 });
+
+app.get("/main", (req, res) => {
+    res.render("main")
+})
 
 app.get("/create", (req, res) => {
     res.render("create")
@@ -76,7 +76,7 @@ app.post("/", (req, res) => {
     res.redirect('/')
 });
 
-app.post("/main", (req, res) => {
+app.post("/", (req, res) => {
 
     let user
 
@@ -90,10 +90,11 @@ app.post("/main", (req, res) => {
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //Januari är 0!
     let yyyy = today.getFullYear();
+    //TODO Add minutes before everything
     console.log(dd + '/' + mm + '/' + yyyy)
 
     Msg.create({
-        from: user,
+        User: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
         message: String

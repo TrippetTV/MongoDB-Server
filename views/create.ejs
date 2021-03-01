@@ -12,12 +12,20 @@
 <div class="container">
     <div class="col">
         <form action="/" method="post">
-            <input type="text" name="user" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="text" name="fName" placeholder="First Name">
-            <input type="text" name="eName" placeholder="Last Name">
-            <input type="number" name="age" id="" placeholder="Age">
-            <input type="submit" value="Submit">
+            <div class="form-group"></div>
+
+            <input type="text" class="form-control" name="user" placeholder="Username">
+
+            <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input type="password" class="form-control" name="pass" placeholder="Password">
+                <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+            </div>
+
+            <input type="text" class="form-control" name="fName" placeholder="First Name">
+            <input type="text" class="form-control" name="eName" placeholder="Last Name">
+            <input type="number" class="form-control" name="age" id="" placeholder="Age">
+            <input type="submit" class="btn btn-outline-primary" value="Submit">
         </form>
     </div>
 </div>
