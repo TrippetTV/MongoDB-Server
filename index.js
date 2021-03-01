@@ -57,8 +57,8 @@ app.get("/create", (req, res) => {
 app.post("/", (req, res) => {
 
     //TODO Check for existing user
-    console.log(User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}))
-    if(!User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age})) {
+    let error = User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}, (err))
+    if(User.countDocuments({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}, limit = 1) !== 0) {
         let usr = req.body.user;
         let pass = req.body.pass;
         let fName = req.body.fName;
@@ -72,10 +72,17 @@ app.post("/", (req, res) => {
             eName: eName,
             age: age,
         });
-    }
-    console.log(req.body);
 
-    res.redirect('/')
+        res.redirect('/')
+
+    }
+    else {
+        switch(error){
+            case error: res.send(error)
+        }
+    }
+
+
 });
 
 app.post("/", (req, res) => {
