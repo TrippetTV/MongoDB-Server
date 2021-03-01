@@ -57,6 +57,8 @@ app.get("/create", (req, res) => {
 app.post("/", (req, res) => {
 
     //TODO Check for existing user
+    console.log(User.findOne({}, { usr: 1, pass: 1, fName: 1, eName: 1, age: 1}))
+    if(!User.findOne({}, { usr: 1, pass: 1, fName: 1, eName: 1, age: 1}) == null)
     console.log(req.body);
     let usr = req.body.user;
     let pass = req.body.pass;
