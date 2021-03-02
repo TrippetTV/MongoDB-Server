@@ -24,9 +24,9 @@
                 </div>
                 <div class="col">
                     <div class="d-flex justify-content-end btn-toolbar">
-                            <div class="end btn-group mr-2">
+                            <div class="btn-group mr-2">
                                 <a href="/create"><button class="btn btn-outline-success">Signup</button></a>
-                                <a href="/create"><button class="btn btn-outline-success">Login</button></a>
+                                <a href="/login"><button class="btn btn-outline-success">Login</button></a>
                             </div>
                         </div>
                 </div>
@@ -39,10 +39,10 @@
         </div>
         <div class="col" id="post-creation">
             <form action="/" method="post" >
-                <textarea name="" id="" cols="50" rows="10">
+                <textarea name="" id="" cols="50" rows="20" id="message">
 
                 </textarea>
-                <input type="submit" class="btn btn-outline-success" value="Upload">
+                <input type="submit" class="btn btn-outline-success" value="Post">
             </form>
             <div class="dimmer">
                 <span class="exit">&times;</span>
@@ -79,16 +79,20 @@
     let check = false;
     const button = document.querySelector("#post-create")
     const posts = document.querySelector("#post-creation")
+    const txt = document.querySelector("#message")
     button.addEventListener("click", (e) => {
         //const dimmer = $('.dimmer');
         if (!check) {
             posts.style.visibility = "visible"
+            txt.style.height = "250px"
             check = true
         }
     })
         exit = document.getElementsByClassName("exit")
         exit.addEventListener("onclick", (e) => {
             check = false
+            txt.style.height = "0"
+            posts.style.visibility = "hidden"
 
         })
 </script>

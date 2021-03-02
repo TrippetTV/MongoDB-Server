@@ -7,7 +7,6 @@ const jsdom = require('jsdom');
 const sesh = require("express-session")
 $ = require("jquery")(new jsdom.JSDOM().window);
 
-//TODO Cookies
 
 app.set("view engine", "ejs");
 app.use(exp.urlencoded({ extended: true }));
@@ -65,7 +64,7 @@ app.get("/create", (req, res) => {
 
 
 
-app.post("/", (req, res) => {
+app.post("/create", (req, res) => {
 
     //TODO Check for existing user
     let error = User.findOne({usr: req.body.user, pass: req.body.pass, age: req.body.age})
@@ -99,10 +98,10 @@ app.post("/", (req, res) => {
 
     if (!req.body.user) {
         user = "Anonymous User"
+        console.log(req.session)
     } else {
         console.log(req.session.cookie)
-        user = req.body.user
-        //user = req.session.username
+        user = req.session.username
     }
 
     let today = new Date();
