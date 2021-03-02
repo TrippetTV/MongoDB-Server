@@ -20,7 +20,7 @@ app.use(exp.json({
 app.use(sesh({
     secret: "bob",
     resave: false,
-    cookie: {name: app.body.user, login: false, maxAge: 86400000}
+    cookie: {name: "Trippet", login: false, maxAge: 86400000}
 }))
 
 moon.connect("mongodb://localhost:27017/Project", {useNewUrlParser: true, useUnifiedTopology: true}).then();
@@ -68,7 +68,7 @@ app.post("/create", (req, res) => {
 
     //TODO Check for existing user
     let error = User.findOne({usr: req.body.user, pass: req.body.pass, age: req.body.age})
-    if(!User.countDocuments({usr: req.body.user, pass: req.body.pass, age: req.body.age}) !== 0) {
+    if(User.count({usr: req.body.user, pass: req.body.pass, age: req.body.age}, limit === 1) === 0) {
         let usr = req.body.user;
         let pass = req.body.pass;
         let age = req.body.age;
@@ -94,6 +94,7 @@ app.post("/create", (req, res) => {
 
 app.post("/", (req, res) => {
 
+    const message = document.querySelector("#message");
     let user
 
     if (!req.body.user) {
@@ -115,7 +116,7 @@ app.post("/", (req, res) => {
         User: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
-        message: String
+        message: message.innerText
     })
 
     res.redirect('/')
