@@ -24,12 +24,16 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="d-flex justify-content-end btn-toolbar">
+                    <% if (req.session.username) {%>
+                        <div class="d-flex justify-content-end"><span>Logged in as: <%=req.session.username%></span></div>
+                    <% } else { %>
+                        <div class="d-flex justify-content-end btn-toolbar">
                             <div class="btn-group mr-2">
                                 <a href="/create"><button class="btn btn-outline-info">Signup</button></a>
                                 <a href="/loginpage"><button class="btn btn-outline-info">Login</button></a>
                             </div>
                         </div>
+                    } %>
                 </div>
             </nav>
         </div>
