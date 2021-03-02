@@ -147,6 +147,8 @@ app.post("/login", (req, res) => {
         req.session.username = username
         res.redirect("/")
     }
+
+    res.redirect("/login")
 })
 
 //SHOW ROUTE
