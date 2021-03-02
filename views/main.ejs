@@ -19,6 +19,7 @@
                 </div>
                 <div class="col">
                     <div style="text-align: center">
+                        <!-- TODO Make button toggleable or add cancel button -->
                         <button class="btn btn-outline-info" id="post-create">Create Post</button>
                     </div>
                 </div>
@@ -61,7 +62,7 @@
             <% data.forEach(function(e){%>
             <div class="card" style="width: 100%">
                 <div class="card-body">
-                    <h5 class="card-title">Posted by <%= e.User %></h5>
+                    <h5 class="card-title">Posted by <%= e.User %> </h5>
                     <h6 class="card-subtitle mb-2 text-muted">
                         <% let dd = String(e.date.getDate()).padStart(2, '0'); %>
                         <% let mm = String(e.date.getMonth() + 1).padStart(2, '0'); %>

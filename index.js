@@ -110,11 +110,12 @@ app.post("/", (req, res) => {
     //TODO Add minutes before everything
     //console.log(dd + '/' + mm + '/' + yyyy)
 
+
     Msg.create({
         User: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
-        message: req.body.message.innerText
+        message: req.body.message
     })
 
     res.redirect('/')
