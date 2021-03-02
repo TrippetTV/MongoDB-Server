@@ -7,6 +7,7 @@ const jsdom = require('jsdom');
 const sesh = require("express-session")
 $ = require("jquery")(new jsdom.JSDOM().window);
 
+let flag = true;
 
 app.set("view engine", "ejs");
 app.use(exp.urlencoded({ extended: true }));
@@ -122,15 +123,14 @@ app.post("/", (req, res) => {
 })
 
 app.get("/login", (req, res) => {
-    let check = false
-    if(!req.session.username && !check) {
+    if(!req.session.username && flag) {
         console.log(req.session)
-        check = true
+        flag = false
         res.redirect("/login")
     }
 
     else{
-        check = false
+        flag = true
         req.session.cookie.login = true
         res.redirect("/")
     }
