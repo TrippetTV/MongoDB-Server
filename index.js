@@ -52,7 +52,6 @@ app.get("/main", (req, res) => {
         if (err){
             res.send("404 - site not found");
         }else{
-            console.log(data);
             res.render("main", {data: data});
         }
     })
@@ -109,7 +108,7 @@ app.post("/", (req, res) => {
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //Januari är 0!
     let yyyy = today.getFullYear();
     //TODO Add minutes before everything
-    console.log(dd + '/' + mm + '/' + yyyy)
+    //console.log(dd + '/' + mm + '/' + yyyy)
 
     Msg.create({
         User: user,
@@ -157,7 +156,6 @@ app.get("/main/:id", (req,res)=>{
         if(err){
             res.send("Profile not found")
         }else{
-            console.log();
             res.render("show", {data:data})
         }
     })
