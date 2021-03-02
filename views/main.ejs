@@ -57,7 +57,7 @@
 
         </div>
         <div id="posts" class="col">
-            <% for (var i = data.count({}); i > 0; i--) { %>
+            <% for (var i = data.keys(data).length; i > 0; i--) { %>
             <div class="card" style="width: 100%">
                 <div class="card-body">
                     <h5 class="card-title">Posted by <%= data.User %> </h5>
