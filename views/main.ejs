@@ -58,11 +58,10 @@
 
         </div>
         <div id="posts" class="col">
-            <!-- TODO Make this shit work, for every message in collection, make a card for that message -->
             <% data.forEach(function(e){%>
             <div class="card" style="width: 100%">
                 <div class="card-body">
-                    <h5 class="card-title"><%=e.from%></h5>
+                    <h5 class="card-title">Posted by <%= e.User %></h5>
                     <h6 class="card-subtitle mb-2 text-muted">
                         <% let dd = String(e.date.getDate()).padStart(2, '0'); %>
                         <% let mm = String(e.date.getMonth() + 1).padStart(2, '0'); %>
@@ -71,7 +70,8 @@
                         <%= dd + '/' + mm + '/' + yyyy %>
                     </h6>
                     <p class="card-text"> <%= e.message %> </p>
-                    <% console.log(e.message) %>
+                    <a href="" class="card-link">Edit Message</a>
+                    <a href="" class="card-link">Delete Message</a>
                 </div>
             </div>
             <% }) %>
