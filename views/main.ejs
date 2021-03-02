@@ -57,23 +57,23 @@
 
         </div>
         <div id="posts" class="col">
-            <% data.forEach(function(e){%>
+            <% for (var i = data.count({}); i > 0; i--) { %>
             <div class="card" style="width: 100%">
                 <div class="card-body">
-                    <h5 class="card-title">Posted by <%= e.User %> </h5>
+                    <h5 class="card-title">Posted by <%= data.User %> </h5>
                     <h6 class="card-subtitle mb-2 text-muted">
-                        <% let dd = String(e.date.getDate()).padStart(2, '0'); %>
-                        <% let mm = String(e.date.getMonth() + 1).padStart(2, '0'); %>
-                        <% let yyyy = e.date.getFullYear(); %>
+                        <% let dd = String(data.date.getDate()).padStart(2, '0'); %>
+                        <% let mm = String(data.date.getMonth() + 1).padStart(2, '0'); %>
+                        <% let yyyy = data.date.getFullYear(); %>
 
                         <%= dd + '/' + mm + '/' + yyyy %>
                     </h6>
-                    <p class="card-text"> <%= e.message %> </p>
+                    <p class="card-text"> <%= data.message %> </p>
                     <a href="" class="card-link">Edit Message</a>
                     <a href="" class="card-link">Delete Message</a>
                 </div>
             </div>
-            <% }) %>
+            <% } %>
         </div>
         <div class="col">
 

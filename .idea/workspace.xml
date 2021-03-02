@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,7 @@
       <workItem from="1614604943420" duration="726000" />
       <workItem from="1614605688698" duration="12164000" />
       <workItem from="1614684758862" duration="152000" />
-      <workItem from="1614684927239" duration="10000000" />
+      <workItem from="1614684927239" duration="11769000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -335,7 +334,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614695228238</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Messages fixed finally?">
+      <created>1614696494822</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614696494822</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Attached textarea to form">
+      <created>1614697163126</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1614697163126</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,8 +367,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried fixing post creation" />
-    <MESSAGE value="Tried fixing post creation again" />
     <MESSAGE value="Moved away post creation from script tag to main html" />
     <MESSAGE value="Added show for posts in ejs + html" />
     <MESSAGE value="Fixed logic error" />
@@ -379,6 +390,8 @@
     <MESSAGE value="Tried simplifying the date shown on the cards" />
     <MESSAGE value="Added links for the cards to in the future be edited and removed" />
     <MESSAGE value="Changed colors according to public request (Dad)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed colors according to public request (Dad)" />
+    <MESSAGE value="Messages fixed finally?" />
+    <MESSAGE value="Attached textarea to form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attached textarea to form" />
   </component>
 </project>
