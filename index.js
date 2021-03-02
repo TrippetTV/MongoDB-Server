@@ -129,7 +129,7 @@ app.get("/loginpage", (req, res) => {
 app.get("/login", (req, res) => {
     if(!req.session.username) {
         console.log(req.session)
-        res.redirect("login")
+        res.redirect("loginpage")
     }
 
     else{
