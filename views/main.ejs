@@ -57,8 +57,7 @@
 
         </div>
         <div id="posts" class="col">
-            <% sortedList = data.find().sort({date: 1}) %>
-            <% sortedList.forEach(function(e){%>
+            <% data.reverse().forEach(function(e){%>
             <div class="card" style="width: 100%">
                 <div class="card-body">
                     <h5 class="card-title">Posted by <%= e.User %> </h5>
