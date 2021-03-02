@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +121,7 @@
       <workItem from="1614604943420" duration="726000" />
       <workItem from="1614605688698" duration="12164000" />
       <workItem from="1614684758862" duration="152000" />
-      <workItem from="1614684927239" duration="3210000" />
+      <workItem from="1614684927239" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -230,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614686545150</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed cookies and making messages">
+      <created>1614689829442</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614689829442</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +269,7 @@
     <MESSAGE value="No duplicate accounts can be Made" />
     <MESSAGE value="Added cookies to verify login, also added login.ejs" />
     <MESSAGE value="Changed design + fixed post not uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed design + fixed post not uploading" />
+    <MESSAGE value="Fixed cookies and making messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed cookies and making messages" />
   </component>
 </project>

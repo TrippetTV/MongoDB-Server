@@ -94,7 +94,6 @@ app.post("/create", (req, res) => {
 
 app.post("/", (req, res) => {
 
-    const message = document.querySelector("#message");
     let user
 
     if (!req.body.user) {
@@ -116,7 +115,7 @@ app.post("/", (req, res) => {
         User: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
-        message: message.innerText
+        message: document.getElementById("message").innerText
     })
 
     res.redirect('/')
@@ -196,20 +195,16 @@ app.delete('/main/:id', async (req, res)=>{
     })
 })
 
-app.get("post", (req, res) => {
+$(app.get("post", (req, res) => {
     const button = document.querySelector("#post-create")
     const dimmer = $('.dimmer');
     button.on("click", (e) => {
         dimmer.show()
-        let txtarea = document.createElement("textarea")
-        txtarea.width = "300px"
-        txtarea.height = "200px"
-        document.appendChild(txtarea)
     });
     exit.on("click", (e) => {
         dimmer.hide()
     })
-});
+}));
 
 
 app.listen(3000, (err) =>{
