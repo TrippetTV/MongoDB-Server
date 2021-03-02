@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +122,7 @@
       <workItem from="1614604943420" duration="726000" />
       <workItem from="1614605688698" duration="12164000" />
       <workItem from="1614684758862" duration="152000" />
-      <workItem from="1614684927239" duration="6568000" />
+      <workItem from="1614684927239" duration="7467000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -299,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614692787169</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added info to each post">
+      <created>1614693031808</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1614693031809</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Removed minimal debugging">
+      <created>1614693165034</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614693165034</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,8 +332,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed middle column to navbar" />
-    <MESSAGE value="Centered create post" />
     <MESSAGE value="Updated Main" />
     <MESSAGE value="Added post creation, haven't been tested" />
     <MESSAGE value="Made seperate branch for last rush" />
@@ -343,6 +355,8 @@
     <MESSAGE value="Fixed login route actually this time" />
     <MESSAGE value="Fixed login route cookie and get functions" />
     <MESSAGE value="Finished? login route after minor adjustments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished? login route after minor adjustments" />
+    <MESSAGE value="Added info to each post" />
+    <MESSAGE value="Removed minimal debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed minimal debugging" />
   </component>
 </project>
