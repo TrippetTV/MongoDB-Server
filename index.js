@@ -52,7 +52,7 @@ app.get("/main", (req, res) => {
         if (err){
             res.send("404 - site not found");
         }else{
-            res.render("main", {data: data});
+            res.render("main", {data: data, req: req, res: res});
         }
     })
 })

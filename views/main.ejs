@@ -69,8 +69,11 @@
                         <%= dd + '/' + mm + '/' + yyyy %>
                     </h6>
                     <p class="card-text"> <%= e.message %> </p>
-                    <a href="" class="card-link">Edit Message</a>
-                    <a href="" class="card-link">Delete Message</a>
+                    <% if (req.session.username == e.User) { %>
+                        <a href="" class="card-link">Edit Message</a>
+                        <a href="" class="card-link">Delete Message</a>
+                    <% } %>
+
                 </div>
             </div>
             <% }) %>
