@@ -195,7 +195,7 @@ app.delete('/main/:id', async (req, res)=>{
     })
 })
 
-$(app.get("post", (req, res) => {
+app.get("post", (req, res) => {
     const button = document.querySelector("#post-create")
     const dimmer = $('.dimmer');
     button.on("click", (e) => {
@@ -204,7 +204,7 @@ $(app.get("post", (req, res) => {
     exit.on("click", (e) => {
         dimmer.hide()
     })
-}));
+});
 
 
 app.listen(3000, (err) =>{
