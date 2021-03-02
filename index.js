@@ -115,7 +115,7 @@ app.post("/", (req, res) => {
         User: user,
         to: "Main",
         date: dd + '/' + mm + '/' + yyyy,
-        message: req.body.getElementById("message").innerText
+        message: req.body.message.innerText
     })
 
     res.redirect('/')
