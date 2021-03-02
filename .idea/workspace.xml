@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="" />
+    <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +121,7 @@
       <workItem from="1614604943420" duration="726000" />
       <workItem from="1614605688698" duration="12164000" />
       <workItem from="1614684758862" duration="152000" />
-      <workItem from="1614684927239" duration="12210000" />
+      <workItem from="1614684927239" duration="12509000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -352,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614698545053</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Huh?">
+      <created>1614698880578</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614698880578</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +380,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added show for posts in ejs + html" />
     <MESSAGE value="Fixed logic error" />
     <MESSAGE value="Starting to not allow duplicate accounts" />
     <MESSAGE value="fixed check for duplicate accounts" />
@@ -396,6 +404,7 @@
     <MESSAGE value="Messages fixed finally?" />
     <MESSAGE value="Attached textarea to form" />
     <MESSAGE value="Changed foreach to for loop to change order of messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed foreach to for loop to change order of messages" />
+    <MESSAGE value="Huh?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Huh?" />
   </component>
 </project>

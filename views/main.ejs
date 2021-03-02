@@ -57,18 +57,18 @@
 
         </div>
         <div id="posts" class="col">
-            <% for (var i = data.keys(data).length; i > 0; i--) { %>
+            <% for (var i = Object.keys(data).length; i > 0; i--) { %>
             <div class="card" style="width: 100%">
                 <div class="card-body">
-                    <h5 class="card-title">Posted by <%= data.User %> </h5>
+                    <h5 class="card-title">Posted by <%= i.User %> </h5>
                     <h6 class="card-subtitle mb-2 text-muted">
-                        <% let dd = String(data.date.getDate()).padStart(2, '0'); %>
-                        <% let mm = String(data.date.getMonth() + 1).padStart(2, '0'); %>
-                        <% let yyyy = data.date.getFullYear(); %>
+                        <% let dd = String(i.date.getDate()).padStart(2, '0'); %>
+                        <% let mm = String(i.date.getMonth() + 1).padStart(2, '0'); %>
+                        <% let yyyy = i.date.getFullYear(); %>
 
                         <%= dd + '/' + mm + '/' + yyyy %>
                     </h6>
-                    <p class="card-text"> <%= data.message %> </p>
+                    <p class="card-text"> <%= i.message %> </p>
                     <a href="" class="card-link">Edit Message</a>
                     <a href="" class="card-link">Delete Message</a>
                 </div>
