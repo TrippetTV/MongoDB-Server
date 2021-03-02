@@ -122,12 +122,15 @@ app.post("/", (req, res) => {
 })
 
 app.get("/login", (req, res) => {
-    if(!req.session.username) {
+    let check = false
+    if(!req.session.username && !check) {
         console.log(req.session)
+        check = true
         res.redirect("/login")
     }
 
     else{
+        check = false
         req.session.cookie.login = true
         res.redirect("/")
     }
