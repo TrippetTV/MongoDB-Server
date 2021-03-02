@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="Added test data">
+      <change afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/delete.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/delete.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +125,9 @@
       <workItem from="1614005440353" duration="179000" />
       <workItem from="1614331263598" duration="17000" />
       <workItem from="1614604943420" duration="726000" />
-      <workItem from="1614605688698" duration="8673000" />
+      <workItem from="1614605688698" duration="12164000" />
+      <workItem from="1614684758862" duration="152000" />
+      <workItem from="1614684927239" duration="935000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -207,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614614118295</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="No duplicate accounts can be Made">
+      <created>1614615621572</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1614615621572</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,20 +251,7 @@
     <MESSAGE value="Fixed logic error" />
     <MESSAGE value="Starting to not allow duplicate accounts" />
     <MESSAGE value="fixed check for duplicate accounts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed check for duplicate accounts" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="778" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614615851652">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="778" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614615851652" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1614616749314">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614616749314" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614616832462">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614616832462" />
+    <MESSAGE value="No duplicate accounts can be Made" />
+    <option name="LAST_COMMIT_MESSAGE" value="No duplicate accounts can be Made" />
   </component>
 </project>

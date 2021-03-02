@@ -4,22 +4,33 @@ const bp = require("body-parser")
 const moon = require("mongoose");
 const mo = require("method-override");
 const jsdom = require('jsdom');
+const sesh = require("express-session")
 $ = require("jquery")(new jsdom.JSDOM().window);
 
+//TODO Cookies
 
 app.set("view engine", "ejs");
 app.use(exp.urlencoded({ extended: true }));
 app.use(exp.static("resources"));
 app.use(mo("_method"));
 
-moon.connect("mongodb://localhost:27017/Project", { useNewUrlParser: true, useUnifiedTopology: true });
+app.use(exp.json({
+    type: ["application/json", "text/plain"]
+}))
+
+app.use(sesh({
+    secret: "bob",
+    resave: false,
+    cookie: {name: app.body.user, login: false, maxAge: 86400000}
+}))
+
+moon.connect("mongodb://localhost:27017/Project", {useNewUrlParser: true, useUnifiedTopology: true}).then();
 
 const UserSchema = new moon.Schema({
     user: String,
     pass: String,
-    fName: String,
-    eName: String,
     age: Number,
+    session: {}
 });
 
 let User = moon.model("User", UserSchema);
@@ -57,20 +68,17 @@ app.get("/create", (req, res) => {
 app.post("/", (req, res) => {
 
     //TODO Check for existing user
-    let error = User.findOne({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age})
-    if(User.countDocuments({usr: req.body.user, pass: req.body.pass, fName: req.body.fName, eName: req.body.eName, age: req.body.age}) !== 0) {
+    let error = User.findOne({usr: req.body.user, pass: req.body.pass, age: req.body.age})
+    if(!User.countDocuments({usr: req.body.user, pass: req.body.pass, age: req.body.age}) !== 0) {
         let usr = req.body.user;
         let pass = req.body.pass;
-        let fName = req.body.fName;
-        let eName = req.body.eName;
         let age = req.body.age;
 
         User.create({
             usr: usr,
             pass: pass,
-            fName: fName,
-            eName: eName,
             age: age,
+            session: {}
         });
 
         res.redirect('/')
@@ -92,7 +100,9 @@ app.post("/", (req, res) => {
     if (!req.body.user) {
         user = "Anonymous User"
     } else {
+        console.log(req.session.cookie)
         user = req.body.user
+        //user = req.session.username
     }
 
     let today = new Date();
@@ -110,6 +120,30 @@ app.post("/", (req, res) => {
     })
 
     res.redirect('/')
+})
+
+app.get("/login", (req, res) => {
+    if(!req.session.username) {
+        console.log(req.session)
+        res.redirect("/login")
+    }
+
+    else{
+        req.session.cookie.login = true
+        res.redirect("/")
+    }
+})
+
+//LOGIN ROUTE
+app.post("/login", (req, res) => {
+
+    let username = req.params.username
+    let password = req.params.password
+
+    if (username == User.find(username) && password == User.find(password)) {
+        req.session.username = username
+        res.redirect("/")
+    }
 })
 
 //SHOW ROUTE
@@ -140,10 +174,7 @@ app.put('/main/:id', async (req, res)=>{
     await User.findByIdAndUpdate(req.params.id, {
         usr:req.body.usr,
         pass:req.body.pass,
-        fName:req.body.fName,
-        eName:req.body.eName,
         age:req.body.age,
-        inS:req.body.inS
     })
     res.redirect('/')
 })
@@ -181,12 +212,8 @@ app.get("post", (req, res) => {
 });
 
 
-app.listen(3000, (err) => {
-    if (err) {
-        console.log(err);
-        console.log("någonting blev fel");
-    }
-    else {
-        console.log("Connected");
-    }
-});
+app.listen(3000, (err) =>{
+    if (err) console.log(err);
+    else console.log("Connected to Server")
+})
+
