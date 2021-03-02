@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d26be6b-dc99-4c7e-9cb0-ecab11690830" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +125,7 @@
       <workItem from="1614604943420" duration="726000" />
       <workItem from="1614605688698" duration="12164000" />
       <workItem from="1614684758862" duration="152000" />
-      <workItem from="1614684927239" duration="5410000" />
+      <workItem from="1614684927239" duration="6156000" />
     </task>
     <task id="LOCAL-00001" summary="changed middle column to navbar">
       <created>1613400937965</created>
@@ -277,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614691620217</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed login route actually this time">
+      <created>1614691949317</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1614691949317</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +329,7 @@
     <MESSAGE value="Fixed messaging? maybe please?" />
     <MESSAGE value="Yeah it's just not gonna work" />
     <MESSAGE value="Fixed login route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed login route" />
+    <MESSAGE value="Fixed login route actually this time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed login route actually this time" />
   </component>
 </project>

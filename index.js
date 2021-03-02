@@ -122,10 +122,14 @@ app.post("/", (req, res) => {
 })
 
 //LOGIN ROUTE
+app.get("/loginpage", (req, res) => {
+    res.render("login")
+})
+
 app.get("/login", (req, res) => {
     if(!req.session.username) {
         console.log(req.session)
-        res.render("/login")
+        res.redirect("login")
     }
 
     else{
