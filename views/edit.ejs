@@ -10,11 +10,7 @@
 <form action="/index/<%= data._id %>/update?_method=PUT" method="POST">
     <input type="text" name="usr" placeholder="Username" value="<%= data.usr%>">
     <input type="text" name="pass" placeholder="Password" value="<%= data.pass%>">
-    <input type="text" name="fName" placeholder="First Name" value="<%= data.fName%>">
-    <input type="text" name="eName" placeholder="Last Name" value="<%= data.eName%>">
     <input type="number" name="age" id="" placeholder="Age" value="<%= data.age%>">
-    <label for="school">In School?</label>
-    <input type="checkbox" name="inSchool" id="" value="<%= data.school%>">
     <input type="submit" value="Submit">
 </form>
 </body>

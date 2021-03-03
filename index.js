@@ -43,6 +43,8 @@ const msgSchema = new moon.Schema({
 
 let Msg = moon.model("Msg", msgSchema)
 
+
+
 app.get("/", (req, res) => {
     res.redirect("/main")
 });
@@ -67,17 +69,18 @@ app.post("/create", (req, res) => {
 
     //TODO Check for existing user
     let error = User.findOne({usr: req.body.user, pass: req.body.pass, age: req.body.age})
-    if(User.count({usr: req.body.user, pass: req.body.pass, age: req.body.age}, limit === 1) === 0) {
+    if(User.find({usr: req.body.user, pass: req.body.pass, age: req.body.age}).count() > 0)
+    {
         let usr = req.body.user;
         let pass = req.body.pass;
         let age = req.body.age;
 
         User.create({
-            usr: usr,
+            user: usr,
             pass: pass,
             age: age,
             session: {}
-        });
+        }).then();
 
         res.redirect('/')
 
@@ -127,12 +130,14 @@ app.get("/loginpage", (req, res) => {
 })
 
 app.get("/login", (req, res) => {
+    //If no username is found
     if(!req.session.username) {
         console.log(req.session)
         res.redirect("loginpage")
     }
-
+    //Otherwise return them to main page
     else{
+        console.log("You have been logged in")
         req.session.cookie.login = true
         res.redirect("/")
     }
@@ -140,14 +145,17 @@ app.get("/login", (req, res) => {
 
 app.post("/login", (req, res) => {
 
-    let username = req.params.username
-    let password = req.params.password
+    const username = req
+    const password = res
 
-    if (username == User.find(username) && password == User.find(password)) {
+    console.log(username, password, req.params)
+
+    if (username == User.find({user: username}) && password == User.find({pass: password})) {
+        console.log("Found User")
         req.session.username = username
         res.redirect("/")
     }
-
+    console.log("Did not find user: " + username + " with password: " + password)
     res.redirect("/login")
 })
 
