@@ -1,6 +1,5 @@
 const exp = require("express");
 const app = exp();
-const bp = require("body-parser")
 const moon = require("mongoose");
 const mo = require("method-override");
 const jsdom = require('jsdom');
@@ -20,7 +19,7 @@ app.use(exp.json({
 app.use(sesh({
     secret: "bob",
     resave: false,
-    cookie: {name: "Trippet", login: false, maxAge: 86400000}
+    cookie: {name: "Trippet", login: false, maxAge: 86400000, secure: true}
 }))
 
 moon.connect("mongodb://localhost:27017/Project", {useNewUrlParser: true, useUnifiedTopology: true}).then();
@@ -98,7 +97,7 @@ app.post("/", (req, res) => {
 
     let user
 
-    if (!req.body.user) {
+    if (!req.session.username) {
         user = "Anonymous User"
         console.log(req.session)
     } else {
@@ -145,17 +144,17 @@ app.get("/login", (req, res) => {
 
 app.post("/login", (req, res) => {
 
-    const username = req
-    const password = res
+    const username = req.body.usrInput
+    const password = req.body.passInput
 
-    console.log(username, password, req.params)
+    console.log(req.body)
 
-    if (username == User.find({user: username}) && password == User.find({pass: password})) {
+    if (User.find({user: username, pass: password})) {
         console.log("Found User")
         req.session.username = username
-        res.redirect("/")
+        return res.redirect("/")
     }
-    console.log("Did not find user: " + username + " with password: " + password)
+    console.log("Did not find user: " + username + " with pass: " + password)
     res.redirect("/login")
 })
 
