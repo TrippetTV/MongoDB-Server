@@ -159,7 +159,7 @@ app.post("/login", (req, res) => {
 })
 
 //SHOW ROUTE
-app.get("/main/:id", (req,res)=>{
+app.get("/index/:id", (req,res)=>{
     User.findById(req.params.id, (err, data)=>{
         if(err){
             res.send("Profile not found")
@@ -170,8 +170,8 @@ app.get("/main/:id", (req,res)=>{
 })
 
 //UPDATE ROUTE
-app.get('/main/:id/edit', (req, res)=>{
-    User.findById(req.params.id, (err, data)=>{
+app.get('/index/:id/edit', (req, res)=>{
+    Msg.findById(req.params.id, (err, data)=>{
         if(err){
             console.log(err);
             res.send('Something went wrong')
@@ -181,30 +181,53 @@ app.get('/main/:id/edit', (req, res)=>{
     })
 })
 
-app.put('/main/:id', async (req, res)=>{
-    await User.findByIdAndUpdate(req.params.id, {
-        usr:req.body.usr,
-        pass:req.body.pass,
-        age:req.body.age,
-    })
+app.put('/index/:id', async (req, res)=>{
+    if (req.body.usr){
+        await User.findByIdAndUpdate(req.params.id, {
+            usr:req.body.usr,
+            pass:req.body.pass,
+            age:req.body.age,
+        })
+    }
+    else {
+        await Msg.findByIdAndUpdate(req.params.id, {
+            message: req.body.message
+        })
+    }
+
     res.redirect('/')
 })
 
 //DELETE ROUTE
-app.get('/main/:id/delete', (req, res)=>{
+app.get('/index/:id/delete', (req, res)=>{
     res.render('delete', {id:req.params.id})
 })
 
-app.delete('/main/:id', async (req, res)=>{
-    await User.findByIdAndDelete(req.params.id, (err)=>{
-        if(err){
-            console.log(err)
-            res.send('Något gick fel')
-        }
-        else{
-            res.redirect('/')
-        }
-    })
+app.delete('/index/:id', async (req, res)=>{
+    if (req.body.usr){
+        await User.findByIdAndDelete(req.params.id, (err)=>{
+            if(err){
+                console.log(err)
+                res.send('Något gick fel')
+            }
+            else{
+                res.redirect('/')
+            }
+        })
+    }
+
+    else{
+        await Msg.findByIdAndDelete(req.params.id, (err)=>{
+            if(err){
+                console.log(err)
+                res.send('Något gick fel')
+            }
+            else{
+                res.redirect('/')
+            }
+        })
+    }
+
 })
 
 app.get("post", (req, res) => {

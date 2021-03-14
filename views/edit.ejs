@@ -8,10 +8,17 @@
 </head>
 <body>
 <form action="/index/<%= data._id %>/update?_method=PUT" method="POST">
-    <input type="text" name="usr" placeholder="Username" value="<%= data.usr%>">
-    <input type="text" name="pass" placeholder="Password" value="<%= data.pass%>">
-    <input type="number" name="age" id="" placeholder="Age" value="<%= data.age%>">
-    <input type="submit" value="Submit">
+    <% if (data.User) { %>
+        <input type="text" name="usr" placeholder="Username" value="<%= data.usr%>">
+        <input type="text" name="pass" placeholder="Password" value="<%= data.pass%>">
+        <input type="text" name="age" placeholder="Age" value="<%= data.age%>">
+        <input type="submit" value="Submit">
+    <% } %>
+    <% else { %>
+            <textarea name="message" id=""><%= data.content%></textarea>
+    <% } %>
+
+
 </form>
 </body>
 </html>

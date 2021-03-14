@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="css/home.css">
 
 </head>
-<body>
-    <div class=".container-fluid">
+<body class="bg-dark">
+    <div class=".container-fluid" style="margin-top: 20px">
         <div class="row align-items-center">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="col">
-                    <a class="navbar-brand" href="/">Bookface</a>
+                    <a class="navbar-brand" href="/" style="margin-left: 20px">Bookface</a>
                 </div>
                 <div class="col">
                     <div style="text-align: center">
@@ -23,12 +23,12 @@
                         <button class="btn btn-outline-info" id="post-create">Create Post</button>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" style="margin-right: 20px">
                     <% if (req.session.username) {%>
                         <div class="d-flex justify-content-end"><span class="text-light">Logged in as: <%=req.session.username%></span></div>
                     <% } else { %>
                         <div class="d-flex justify-content-end btn-toolbar">
-                            <div class="btn-group mr-2">
+                            <div class="btn-group mr-2" style="margin-right: 20px">
                                 <a href="/create"><button class="btn btn-outline-info">Signup</button></a>
                                 <a href="/loginpage"><button class="btn btn-outline-info">Login</button></a>
                             </div>
@@ -75,8 +75,8 @@
                     </h6>
                     <p class="card-text"> <%= e.message %> </p>
                     <% if (req.session.username === e.User) { %>
-                        <a href="" class="card-link">Edit Message</a>
-                        <a href="" class="card-link">Delete Message</a>
+                        <a href="/index/<%= e._id %>/edit" class="card-link">Edit Message</a>
+                        <a href="/index/<%= e._id %>/delete" class="card-link">Delete Message</a>
                     <% } %>
                 </div>
             </div>
